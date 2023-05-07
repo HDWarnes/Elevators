@@ -1,0 +1,15 @@
+/Users/hamish/Developer/Elevators/Elevators/obj/Debug/net7.0/Elevators.csproj.AssemblyReference.cache
+/Users/hamish/Developer/Elevators/Elevators/obj/Debug/net7.0/Elevators.GeneratedMSBuildEditorConfig.editorconfig
+/Users/hamish/Developer/Elevators/Elevators/obj/Debug/net7.0/Elevators.AssemblyInfoInputs.cache
+/Users/hamish/Developer/Elevators/Elevators/obj/Debug/net7.0/Elevators.AssemblyInfo.cs
+/Users/hamish/Developer/Elevators/Elevators/obj/Debug/net7.0/Elevators.csproj.CoreCompileInputs.cache
+/Users/hamish/Developer/Elevators/Elevators/bin/Debug/net7.0/Elevators
+/Users/hamish/Developer/Elevators/Elevators/bin/Debug/net7.0/Elevators.deps.json
+/Users/hamish/Developer/Elevators/Elevators/bin/Debug/net7.0/Elevators.runtimeconfig.json
+/Users/hamish/Developer/Elevators/Elevators/bin/Debug/net7.0/Elevators.dll
+/Users/hamish/Developer/Elevators/Elevators/bin/Debug/net7.0/Elevators.pdb
+/Users/hamish/Developer/Elevators/Elevators/obj/Debug/net7.0/Elevators.dll
+/Users/hamish/Developer/Elevators/Elevators/obj/Debug/net7.0/refint/Elevators.dll
+/Users/hamish/Developer/Elevators/Elevators/obj/Debug/net7.0/Elevators.pdb
+/Users/hamish/Developer/Elevators/Elevators/obj/Debug/net7.0/Elevators.genruntimeconfig.cache
+/Users/hamish/Developer/Elevators/Elevators/obj/Debug/net7.0/ref/Elevators.dll

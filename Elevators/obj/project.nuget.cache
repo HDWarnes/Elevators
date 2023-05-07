@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "sIFsFZnJ6tMCK4yDLX6YQrYzfYRjU0AiESQe2RQEdonR1wTGKlEuGespmxPIOLfQ56DUpnWqHgTGyOCC/dd5CQ==",
+  "dgSpecHash": "TDuq9gcacbQrP1m86Y0ST14mtHGC4JI6FN9pil2yj5MWpSMNjPkHVeFr6S2tzm1qdmcY5C5Q1uirxUJx45IYqA==",
   "success": true,
-  "projectFilePath": "/Users/hamish/Developer/Elevators/Elevators/Elevators.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/Users/hamish/Developer/Elevators-1/Elevators/Elevators.csproj",
+  "expectedPackageFiles": [
+    "/Users/hamish/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/hamish/.nuget/packages/netstandard.library/2.0.0/netstandard.library.2.0.0.nupkg.sha512",
+    "/Users/hamish/.nuget/packages/nunit/3.13.3/nunit.3.13.3.nupkg.sha512"
+  ],
   "logs": []
 }

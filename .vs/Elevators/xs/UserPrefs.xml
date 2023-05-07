@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{EB39FF02-8017-467E-B9D0-88F4CD559D76}|Default" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Elevators PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.Elevators.Tests PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Elevators.Tests/UnitTest1.cs">
+    <Files>
+      <File FileName="Elevators/Program.cs" Line="52" Column="8" />
+      <File FileName="Elevators/ProgramTests.cs" Line="48" Column="2" />
+      <File FileName="Elevators.Tests/UnitTest1.cs" Line="49" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Elevators" expanded="True">
+            <Node name="Elevators" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+            </Node>
+            <Node name="Elevators.Tests" expanded="True" selected="True">
+              <Node name="Dependencies" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Elevators" expanded="True">
+            <Node name="Elevators.Tests" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+</Properties>

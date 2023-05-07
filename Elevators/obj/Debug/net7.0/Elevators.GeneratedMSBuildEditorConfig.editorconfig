@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Elevators
-build_property.ProjectDir = /Users/hamish/Developer/Elevators/Elevators/
+build_property.ProjectDir = /Users/hamish/Developer/Elevators-1/Elevators/

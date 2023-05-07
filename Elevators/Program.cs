@@ -1,4 +1,4 @@
-﻿class Elevator
+﻿public class Elevator
 {
     public int CurrentFloor { get; set; }
     public int DestinationFloor { get; set; }
@@ -16,6 +16,16 @@
 
     public void MoveUp()
     {
+        if (Direction == ElevatorDirection.Down)
+        {
+            Console.WriteLine("Error: Elevator is moving down and cannot move up.");
+            return;
+        }
+        if (CurrentFloor == DestinationFloor)
+        {
+            Console.WriteLine("Error: Elevator is already at the destination floor.");
+            return;
+        }
         CurrentFloor++;
         if (CurrentFloor == DestinationFloor)
         {
@@ -33,6 +43,16 @@
 
     public void MoveDown()
     {
+        if (Direction == ElevatorDirection.Up)
+        {
+            Console.WriteLine("Error: Elevator is moving up and cannot move down.");
+            return;
+        }
+        if (CurrentFloor == DestinationFloor)
+        {
+            Console.WriteLine("Error: Elevator is already at the destination floor.");
+            return;
+        }
         CurrentFloor--;
         if (CurrentFloor == DestinationFloor)
         {
@@ -49,7 +69,8 @@
     }
 }
 
-class Building
+
+public class Building
 {
     public int NumberOfFloors { get; set; }
     public int NumberOfElevators { get; set; }
@@ -194,7 +215,13 @@ class Program
                 case "1":
                     Console.Write("Enter floor number: ");
                     int floor = int.Parse(Console.ReadLine());
+                    while (floor > building.NumberOfFloors)
+                    {
+                        Console.Write("Enter floor number less than "+ building.NumberOfFloors);
+                        floor = int.Parse(Console.ReadLine());
+                    }
                     building.CallElevator(floor);
+                    
                     Console.WriteLine();
                     break;
                 case "2":

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/hamish/Developer/Elevators/Elevators/Elevators.csproj": {}
+    "/Users/hamish/Developer/Elevators-1/Elevators/Elevators.csproj": {}
   },
   "projects": {
-    "/Users/hamish/Developer/Elevators/Elevators/Elevators.csproj": {
+    "/Users/hamish/Developer/Elevators-1/Elevators/Elevators.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/hamish/Developer/Elevators/Elevators/Elevators.csproj",
+        "projectUniqueName": "/Users/hamish/Developer/Elevators-1/Elevators/Elevators.csproj",
         "projectName": "Elevators",
-        "projectPath": "/Users/hamish/Developer/Elevators/Elevators/Elevators.csproj",
+        "projectPath": "/Users/hamish/Developer/Elevators-1/Elevators/Elevators.csproj",
         "packagesPath": "/Users/hamish/.nuget/packages/",
-        "outputPath": "/Users/hamish/Developer/Elevators/Elevators/obj/",
+        "outputPath": "/Users/hamish/Developer/Elevators-1/Elevators/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/hamish/.nuget/NuGet/NuGet.Config"
@@ -37,6 +37,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -53,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
         }
       }
     }

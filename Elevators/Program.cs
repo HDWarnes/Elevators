@@ -39,6 +39,7 @@
             Console.WriteLine("Elevator at floor " + CurrentFloor + " " + Direction + " with " + NumberOfPeople + " people");
 
         }
+        Thread.Sleep(1000);
     }
 
     public void MoveDown()
@@ -64,8 +65,8 @@
         {
             Direction = ElevatorDirection.Down;
             Console.WriteLine("Elevator at floor " + CurrentFloor + " going " + Direction + " with " + NumberOfPeople + " people");
-
         }
+        Thread.Sleep(1000);
     }
 }
 
@@ -106,40 +107,47 @@ public class Building
             closestElevator.DestinationFloor = floor;
             Elevator.ElevatorDirection direction = closestElevator.CurrentFloor < floor ? Elevator.ElevatorDirection.Up : Elevator.ElevatorDirection.Down;
 
-            while (closestElevator.CurrentFloor != closestElevator.DestinationFloor)
+            // Create a new thread for each elevator that needs to be called
+            Thread elevatorThread = new Thread(() =>
             {
-                int waitingListCount = direction == Elevator.ElevatorDirection.Up ? WaitingListUp[closestElevator.CurrentFloor, 0] : WaitingListDown[closestElevator.CurrentFloor, 0];
-
-                if (waitingListCount > 0)
+                while (closestElevator.CurrentFloor != closestElevator.DestinationFloor)
                 {
-                    int numberOfPeopleToAdd = waitingListCount < closestElevator.Space ? waitingListCount : closestElevator.Space;
-                    closestElevator.NumberOfPeople += numberOfPeopleToAdd;
-                    closestElevator.Space -= numberOfPeopleToAdd;
+                    int waitingListCount = direction == Elevator.ElevatorDirection.Up ? WaitingListUp[closestElevator.CurrentFloor, 0] : WaitingListDown[closestElevator.CurrentFloor, 0];
+
+                    if (waitingListCount > 0)
+                    {
+                        int numberOfPeopleToAdd = waitingListCount < closestElevator.Space ? waitingListCount : closestElevator.Space;
+                        closestElevator.NumberOfPeople += numberOfPeopleToAdd;
+                        closestElevator.Space -= numberOfPeopleToAdd;
+
+                        if (direction == Elevator.ElevatorDirection.Up)
+                        {
+                            WaitingListUp[closestElevator.CurrentFloor, 0] -= numberOfPeopleToAdd;
+                            Console.WriteLine("Elevator at floor " + closestElevator.CurrentFloor + " going " + closestElevator.Direction + " with " + numberOfPeopleToAdd + " people getting on");
+                        }
+                        else
+                        {
+                            WaitingListDown[closestElevator.CurrentFloor, 0] -= numberOfPeopleToAdd;
+                            Console.WriteLine("Elevator at floor " + closestElevator.CurrentFloor + " going " + closestElevator.Direction + " with " + numberOfPeopleToAdd + " people getting on");
+
+                        }
+                    }
 
                     if (direction == Elevator.ElevatorDirection.Up)
                     {
-                        WaitingListUp[closestElevator.CurrentFloor, 0] -= numberOfPeopleToAdd;
-                        Console.WriteLine("Elevator at floor " + closestElevator.CurrentFloor + " going " + closestElevator.Direction + " with " + numberOfPeopleToAdd + " people getting on");
+                        closestElevator.MoveUp();
                     }
                     else
                     {
-                        WaitingListDown[closestElevator.CurrentFloor, 0] -= numberOfPeopleToAdd;
-                        Console.WriteLine("Elevator at floor " + closestElevator.CurrentFloor + " going " + closestElevator.Direction + " with " + numberOfPeopleToAdd + " people getting on");
-
+                        closestElevator.MoveDown();
                     }
                 }
+            });
 
-                if (direction == Elevator.ElevatorDirection.Up)
-                {
-                    closestElevator.MoveUp();
-                }
-                else
-                {
-                    closestElevator.MoveDown();
-                }
-            }
+            elevatorThread.Start();
         }
     }
+
 
 
     public void SetWaitingList(int floor, int numberOfPeople, int direction)
